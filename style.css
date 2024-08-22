@@ -198,7 +198,7 @@ td {
 }
 
 /* responsive */
-@media screen and (max-width: 476px) {
+@media screen and (max-width: 467px) {
     .about-container p {
         font-size: 18px;
         width: 50%;
@@ -211,7 +211,7 @@ td {
     }
 
     .about-container{
-        height: 255vh;
+        height: 180vh;
     }
 
     .img-container img {
@@ -224,14 +224,18 @@ td {
         flex-direction: column;
     }
 
+    .foto{
+        width: 280px;
+    }
+
     .foto-container {
-        height: 360vh;
+        height: 290vh;
         display: flex;
         flex-direction: column;
     }
 
     .gallery-container{
-        height: 150vh;
+        height: 110vh;
     }
 
     .photo-container-2{
@@ -245,7 +249,18 @@ td {
     }
 
     .gallery-container img{
-        width: 30%;
+        width: 40%;
     }
 
+    .table-container {
+        height: 130vh;
+    }
+
+    table th,
+td {
+    font-size: 15px;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
 }
