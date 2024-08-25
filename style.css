@@ -5,7 +5,12 @@ body {
     background-color: #efefef;
 }
 
-.navbar-container {
+.navbar-container{ 
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-head-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +18,25 @@ body {
     background-color: #1F316F;
     color: white;
 }
+
+.navbar-list-container{
+    background-color: #fefefe;
+    height: 10vh;
+}
+
+.navbar-list-container ul{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar-list-container a{
+    text-decoration: none;
+    color: #1F316F;
+}
+
 
 /* about */
 .about-container {
@@ -103,16 +127,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 115vh;
-}
-
-.table-information h1 {
-    text-align: center;
+    height: 130vh;
 }
 
 .table-container img {
     width: 200px;
-    height: 250px;
+    height: 300px;
 }
 
 .table-foto {
@@ -150,6 +170,26 @@ td {
 
 .sm a {
     text-decoration: none;
+}
+
+.button-back img{
+    width: 40px;
+}
+
+.head-table-information{
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    background-color: #fefefe;
+}
+
+.button-back{
+  display: flex;
+  margin-left: 20px;
+}
+
+.h1-table{
+margin-left: 30%;
 }
 
 /* gallery */
@@ -225,7 +265,7 @@ td {
     }
 
     .foto {
-        width: 280px;
+        width: 250px;
     }
 
     .foto-container {
@@ -253,13 +293,21 @@ td {
     }
 
     .table-container {
-        height: 130vh;
+        height: 140vh;
+    }
+
+    .h1-table h1{
+        font-size: 20px;
     }
 
     table th,
     td {
-        font-size: 13px;
+        font-size: 11px;
         border: 1px solid #ddd;
         padding: 8px;
+    }
+
+    .footer-container h2{
+        font-size: 1rem;
     }
 }
