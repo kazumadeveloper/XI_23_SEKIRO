@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Mengatur font pada seluruh body */
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%; /* Input akan memiliki lebar penuh */
+    padding: 12px 20px; /* Menambahkan padding di dalam input */
+    margin: 8px 0; /* Margin atas dan bawah */
+    display: inline-block; /* Membuat input menjadi elemen inline block */
+    border: 1px solid #ccc; /* Membuat border abu-abu */
+    box-sizing: border-box; /* Memastikan padding dan border termasuk dalam ukuran elemen */
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    padding: 14px 20px; /* Padding di dalam tombol */
+    margin: 8px 0; /* Margin atas dan bawah tombol */
+    border: none; /* Menghilangkan border default */
+    cursor: pointer; /* Menampilkan kursor pointer saat hover */
+    width: 100%; /* Tombol akan memiliki lebar penuh */
+  }
+  
+  button:hover {
+    opacity: 0.8; /* Mengurangi opasitas tombol saat di-hover */
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto; /* Lebar otomatis (menyesuaikan dengan konten) */
+    padding: 10px 18px; /* Padding di dalam tombol */
+    background-color: #f44336; /* Warna latar belakang merah untuk tombol cancel */
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center; /* Menengahkan konten di dalam kontainer */
+    margin: 24px 0 12px 0; /* Memberikan margin atas, bawah */
+    position: relative; /* Posisi relatif untuk mengatur elemen di dalamnya */
+  }
+  
+  img.avatar {
+    width: 10%; /* Ukuran lebar gambar avatar */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+  }
+  
+  .container {
+    padding: 16px; /* Padding di dalam kontainer */
+  }
+  
+  span.psw {
+    float: right; /* Memposisikan teks ke kanan */
+    padding-top: 16px; /* Memberikan padding atas */
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Modal tersembunyi secara default */
+    position: fixed; /* Modal tetap pada tempatnya meskipun halaman di-scroll */
+    z-index: 1; /* Modal berada di atas elemen lain */
+    left: 0;
+    top: 0;
+    width: 100%; /* Lebar penuh layar */
+    height: 100%; /* Tinggi penuh layar */
+    overflow: auto; /* Mengaktifkan scroll jika konten terlalu panjang */
+    background-color: rgb(0,0,0); /* Warna latar belakang hitam solid (fallback) */
+    background-color: rgba(0,0,0,0.4); /* Warna latar belakang hitam transparan */
+    padding-top: 60px; /* Memberikan jarak dari atas layar */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe; /* Warna latar belakang konten modal (putih) */
+    margin: 5% auto 15% auto; /* Jarak margin dari atas, bawah, dan tengah */
+    border: 1px solid #888; /* Border abu-abu */
+    width: 80%; /* Lebar modal, disesuaikan dengan ukuran layar */
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute; /* Posisi absolut di dalam modal */
+    right: 25px; /* Jarak dari kanan */
+    top: 0; /* Jarak dari atas */
+    color: #000; /* Warna hitam untuk tombol close */
+    font-size: 35px; /* Ukuran font besar untuk tombol close */
+    font-weight: bold; /* Font tebal */
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red; /* Warna tombol close berubah menjadi merah saat di-hover atau di-fokus */
+    cursor: pointer; /* Kursor berubah menjadi pointer */
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s; /* Animasi zoom pada browser berbasis WebKit */
+    animation: animatezoom 0.6s; /* Animasi zoom selama 0.6 detik */
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} /* Mulai dari skala 0 */
+    to {-webkit-transform: scale(1)} /* Zoom hingga skala normal (1) */
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)} /* Mulai dari skala 0 */
+    to {transform: scale(1)} /* Zoom hingga skala normal (1) */
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block; /* Tampilkan sebagai block (penuh) */
+       float: none; /* Hilangkan float */
+    }
+    .cancelbtn {
+       width: 100%; /* Tombol cancel akan lebar penuh di layar kecil */
+    }
+  }
+  
