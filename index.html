@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Deklarasi tipe dokumen HTML5 -->
+<html> <!-- Awal tag HTML -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBSITE SEKIRO</title>
-    <link rel="stylesheet" href="style.css">
+<head> <!-- tag head -->
+    <title>Login</title> <!-- Judul halaman -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Membuat halaman responsif di perangkat mobile -->
+    <link rel="stylesheet" href="loginregister.css">
 
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>
+<body> <!-- Awal tag body, tempat konten utama halaman -->
+
     <header>
         <div class="navbar-container">
         <div class="navbar-head-container">
@@ -23,73 +20,106 @@
         </div>
         <div class="navbar-list-container">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#t-i">Table Information</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                <!-- Tombol untuk membuka modal login, memunculkan modal dengan id 'id01' saat diklik -->
+                <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Register</button>
             </ul>
         </div>
     </div>
     </header>
     <main>
         <div class="about-container">
-            <h1 id="about">About <span>SEKIRO</span></h1>
-            <p>Kelompok SEKIRO Terdiri atas 3 orang Wota yaitu Kusuma, Satya, Elijah.</p>
+            <h1 id="about">Welcome To <span>SEKIRO</span></h1>
+            <p><marquee>Selamat datang di Website Sekiro Untuk Melihat lebih lanjut Login Dulu Yuk!</marquee> </p>
             <div class="img-container">
                 <img src="img/suma.jpg" alt="">
                 <img src="img/satya.jpg" alt="">
                 <img src="img/el.jpg" alt="">
             </div>
         </div>
-
-        <div class="foto-container">
-            <h1 id="t-i">Table Information</h1>
-            <div class="foto-container-2">
-                <div class="foto">
-                    <h2>Kusuma</h2>
-                    <img src="img/suma.jpg" alt="">
-                    <a href="table.html">
-                        <button>KLIK BRO</button>
-                    </a>
-                </div>
-
-                <div class="foto">
-                    <h2>Sathya</h2>
-                    <img src="img/satya.jpg" alt="">
-                    <a href="table2.html">
-                        <button>KLIK BRO</button>
-                    </a>
-                </div>
-
-                <div class="foto">
-                    <h2>Elijah</h2>
-                    <img src="img/el.jpg" alt="">
-                    <a href="table3.html">
-                        <button>KLIK BRO</button>
-                    </a>
-            </div>
-        </div>
-        </div>
-
-        <div class="gallery-container">
-            <h1 class="gallery" id="gallery">Gallery</h1>
-            <p>Kenangan Kami Bertiga dan teman teman lain nya.</p>
-            <div class="photo-container-1">
-                <img src="img/photo2.jpg" alt="">
-                <img src="img/photo1.jpg" alt="">
-            </div>
-            <div class="photo-container-2">
-                <img src="img/photo4.jpg" alt="">
-                <img src="img/photo5.jpg" alt="">
-                <img src="img/photo6.jpg" alt="">
-            </div>
-        </div>
-
     </main>
-    <footer>
-        <div class="footer-container">
-            <h2>Terimakasih Telah Berkunjung!</h2>
-        </div>
-    </footer>
+
+    <div id="id01" class="modal"> <!-- Modal untuk form login, ditampilkan ketika tombol login diklik -->
+
+        <form class="modal-content animate" action="home.html" method="post"> <!-- Form login, data dikirim ke 'action_page.php' menggunakan metode POST -->
+            <div class="imgcontainer"> <!-- Kontainer untuk gambar avatar dan tombol close -->
+
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <!-- Tombol close (X) untuk menutup modal -->
+
+                <img src="user.png" alt="Avatar" class="avatar"> <!-- Gambar avatar (user.png) -->
+            </div>
+
+            <div class="container"> <!-- Kontainer untuk elemen input dan tombol -->
+
+                <label for="uname"><b>Username</b></label> <!-- Label untuk input username -->
+                <input type="text" placeholder="Enter Username" name="uname" required> <!-- Input teks untuk username, wajib diisi -->
+
+                <label for="psw"><b>Password</b></label> <!-- Label untuk input password -->
+                <input type="password" placeholder="Enter Password" name="psw" required> <!-- Input password, wajib diisi -->
+                <span class="psw">Forgot <a href="#">password?</a></span> <!-- Link "Forgot password" yang bisa dihubungkan ke halaman pemulihan -->
+                   <a href="home.html"><button type="submit">Login</button></a> 
+                <!-- Tombol submit untuk login -->
+                <span class="psw">Dont Haven't Account?<a href="register.html">Sign up</a></span>
+
+                <label> <!-- Label untuk checkbox Remember me -->
+                    <input type="checkbox" checked="checked" name="remember"> Remember me <!-- Checkbox Remember me, otomatis tercentang -->
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1"> <!-- Kontainer tambahan dengan background berbeda -->
+
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                <!-- Tombol cancel, yang ketika diklik menutup modal -->
+            </div>
+        </form>
+    </div>
+
+    <div id="id02" class="modal"> <!-- Modal untuk form login, ditampilkan ketika tombol login diklik -->
+        <form class="modal-content animate" action="index.html" method="post"> <!-- Form login, data dikirim ke 'action_page.php' menggunakan metode POST -->
+            <div class="imgcontainer"> <!-- Kontainer untuk gambar avatar dan tombol close -->
+                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <!-- Tombol close (X) untuk menutup modal -->
+
+                <img src="user.png" alt="Avatar" class="avatar"> <!-- Gambar avatar (user.png) -->
+            </div>
+
+            <div class="container"> <!-- Kontainer untuk elemen input dan tombol -->
+
+                <label for="uname"><b>Username</b></label> <!-- Label untuk input username -->
+                <input type="text" placeholder="Enter Username" name="uname" required> <!-- Input teks untuk username, wajib diisi -->
+
+                <label for="email"><b>Email</b></label> <!-- Label untuk input username -->
+                <input type="email" placeholder="Enter Email" name="email" required> <!-- Input teks untuk username, wajib diisi -->
+
+                <label for="nohp"><b>No Handphone</b></label> <!-- Label untuk input username -->
+                <input type="number" placeholder="Enter No Handphone" name="nohp" required> <!-- Input teks untuk username, wajib diisi -->
+
+                <label for="psw"><b>Password</b></label> <!-- Label untuk input password -->
+                <input type="password" placeholder="Enter Password" name="psw" required> <!-- Input password, wajib diisi -->
+                
+                <label for="psw"><b>Confirm Password</b></label> <!-- Label untuk input password -->
+                <input type="password" placeholder="Enter Confirm Password" name="psw" required> <!-- Input password, wajib diisi -->
+
+                <span class="psw">Forgot <a href="#">password?</a></span> <!-- Link "Forgot password" yang bisa dihubungkan ke halaman pemulihan -->
+           
+                   <a href="index.html"><button type="submit">Register</button></a> 
+
+                <!-- Tombol submit untuk login -->
+                <span class="psw">Have? Account?<a href="login.html">Sign In</a></span>
+
+                <label> <!-- Label untuk checkbox Remember me -->
+                    <input type="checkbox" checked="checked" name="remember"> Remember me <!-- Checkbox Remember me, otomatis tercentang -->
+                </label>
+            </div>
+
+            <div class="container" style="background-color:#f1f1f1"> <!-- Kontainer tambahan dengan background berbeda -->
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="projectlogin.js"></script> <!-- Menyertakan file JavaScript eksternal untuk logika fungsionalitas -->
 </body>
 
 </html>
