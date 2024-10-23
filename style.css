@@ -118,6 +118,8 @@ body {
     border-radius: 10px;
     background-color: #1F316F;
     color: white;
+    border: none;
+    cursor: pointer;
 }
 
 .foto img {
@@ -180,7 +182,7 @@ td {
 }
 
 .button-back img {
-    width: 40px;
+    width: 20px;
 }
 
 .head-table-information {

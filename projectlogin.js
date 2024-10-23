@@ -1,29 +1,61 @@
-// Get the modal
-var modal = document.getElementById('id01'); // Mendapatkan elemen modal dengan id 'id01'
+// Ambil elemen modal dengan ID masing-masing
+var modal1 = document.getElementById('id01'); // Modal Login
+var modal2 = document.getElementById('id02'); // Modal Register
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) { // Menambahkan event listener untuk mendeteksi klik di seluruh jendela browser
-    if (event.target == modal) { // Memeriksa apakah elemen yang diklik adalah modal (bukan konten modal)
-        modal.style.display = "none"; // Jika benar, tutup modal dengan mengubah 'display' menjadi 'none'
+// Tambahkan event listener untuk menutup modal jika klik di luar modal
+window.onclick = function (event) {
+    if (event.target === modal1) {
+        modal1.style.display = "none";  // Tutup modal login
+    } 
+    else if (event.target === modal2) {
+        modal2.style.display = "none";  // Tutup modal register
     }
-}
+};
+
+// Ketika halaman dimuat, tambahkan state baru ke riwayat
+history.pushState(null, null, null);
+
+// Mencegah kembali dengan menambahkan event handler
+window.onpopstate = function () {
+    history.pushState(null, null, null);
+};
 
 
-var modal = document.getElementById('id02'); // Mendapatkan elemen modal dengan id 'id01'
+// Ambil elemen-elemen yang diperlukan
+const openRegisterLink = document.getElementById('openRegister');
+const openLoginLink = document.getElementById('openLogin');
+const registerModal = document.getElementById('id02');
+const loginModal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) { // Menambahkan event listener untuk mendeteksi klik di seluruh jendela browser
-    if (event.target == modal) { // Memeriksa apakah elemen yang diklik adalah modal (bukan konten modal)
-        modal.style.display = "none"; // Jika benar, tutup modal dengan mengubah 'display' menjadi 'none'
-    }
-}
 
-    // Ketika halaman dimuat, tambahkan state baru ke riwayat
-    history.pushState(null, null, window.location.href);
+// Tambahkan event listener untuk membuka modal register
+openRegisterLink.addEventListener('click', function (event) {
+    event.preventDefault();  // Mencegah link melakukan navigasi default
+    registerModal.style.display = 'block';  // Tampilkan modal register
+    loginModal.style.display = 'none';  // Tampilkan modal register
+});
 
-    // Mencegah kembali dengan menambahkan event handler
-    window.onpopstate = function() {
-        history.pushState(null, null, window.location.href);
-        alert("Tombol 'Back' dinonaktifkan di halaman ini.");
-    };
+// Tambahkan event listener untuk membuka modal login
+openLoginLink.addEventListener('click', function (event) {
+    event.preventDefault();  // Mencegah link melakukan navigasi default
+    registerModal.style.display = 'none';  // Tampilkan modal register
+    loginModal.style.display = 'block';  // Tampilkan modal register
+});
+
+const registerToLogin = document.getElementById('registerToLogin');
+registerToLogin.addEventListener('click', function (event) {
+    event.preventDefault();
+    loginModal.style.display = 'block';
+    registerModal.style.display = 'none';
+    alert("Register Berhasil");
+});
+
+
+
+
+
+
+
+
+
 

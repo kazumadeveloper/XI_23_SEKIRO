@@ -30,7 +30,7 @@
     <main>
         <div class="about-container">
             <h1 id="about">Welcome To <span>SEKIRO</span></h1>
-            <p><marquee>Selamat datang di Website Sekiro Untuk Melihat lebih lanjut Login Dulu Yuk!</marquee> </p>
+            <p>Selamat datang di Website Sekiro Untuk Melihat lebih lanjut Login Dulu Yuk!</p>
             <div class="img-container">
                 <img src="img/suma.jpg" alt="">
                 <img src="img/satya.jpg" alt="">
@@ -41,7 +41,7 @@
 
     <div id="id01" class="modal"> <!-- Modal untuk form login, ditampilkan ketika tombol login diklik -->
 
-        <form class="modal-content animate" action="home.html" method="post"> <!-- Form login, data dikirim ke 'action_page.php' menggunakan metode POST -->
+        <form class="modal-content animate" action="home.html" method="GET"> <!-- Form login, data dikirim ke 'action_page.php' menggunakan metode POST -->
             <div class="imgcontainer"> <!-- Kontainer untuk gambar avatar dan tombol close -->
 
                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -58,9 +58,9 @@
                 <label for="psw"><b>Password</b></label> <!-- Label untuk input password -->
                 <input type="password" placeholder="Enter Password" name="psw" required> <!-- Input password, wajib diisi -->
                 <span class="psw">Forgot <a href="#">password?</a></span> <!-- Link "Forgot password" yang bisa dihubungkan ke halaman pemulihan -->
-                   <a href="home.html"><button type="submit">Login</button></a> 
+                   <button type="submit">Login</button>
                 <!-- Tombol submit untuk login -->
-                <span class="psw">Dont Haven't Account?<a href="register.html">Sign up</a></span>
+                <span class="psw">Dont Haven't Account?<a href="#" id="openRegister">Sign up</a></span>
 
                 <label> <!-- Label untuk checkbox Remember me -->
                     <input type="checkbox" checked="checked" name="remember"> Remember me <!-- Checkbox Remember me, otomatis tercentang -->
@@ -76,7 +76,7 @@
     </div>
 
     <div id="id02" class="modal"> <!-- Modal untuk form login, ditampilkan ketika tombol login diklik -->
-        <form class="modal-content animate" action="index.html" method="post"> <!-- Form login, data dikirim ke 'action_page.php' menggunakan metode POST -->
+        <form class="modal-content animate" action="index.html" method="GET"> <!-- Form login, data dikirim ke 'action_page.php' menggunakan metode POST -->
             <div class="imgcontainer"> <!-- Kontainer untuk gambar avatar dan tombol close -->
                 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
                 <!-- Tombol close (X) untuk menutup modal -->
@@ -100,13 +100,11 @@
                 
                 <label for="psw"><b>Confirm Password</b></label> <!-- Label untuk input password -->
                 <input type="password" placeholder="Enter Confirm Password" name="psw" required> <!-- Input password, wajib diisi -->
-
-                <span class="psw">Forgot <a href="#">password?</a></span> <!-- Link "Forgot password" yang bisa dihubungkan ke halaman pemulihan -->
            
-                   <a href="index.html"><button type="submit">Register</button></a> 
+                   <button type="submit" id="registerToLogin">Register</button> 
 
                 <!-- Tombol submit untuk login -->
-                <span class="psw">Have? Account?<a href="login.html">Sign In</a></span>
+                <span class="psw">Have? Account?<a href="#" id="openLogin">Sign In</a></span>
 
                 <label> <!-- Label untuk checkbox Remember me -->
                     <input type="checkbox" checked="checked" name="remember"> Remember me <!-- Checkbox Remember me, otomatis tercentang -->
