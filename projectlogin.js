@@ -12,13 +12,17 @@ window.onclick = function (event) {
     }
 };
 
-// Ketika halaman dimuat, tambahkan state baru ke riwayat
-history.pushState(null, null, null);
+// // Ketika halaman dimuat, tambahkan state baru ke riwayat
+// history.pushState(null, null, null);
 
-// Mencegah kembali dengan menambahkan event handler
-window.onpopstate = function () {
-    history.pushState(null, null, null);
-};
+// // Mencegah kembali dengan menambahkan event handler
+// window.onpopstate = function () {
+//     history.pushState(null, null, null);
+// };
+
+function preventBack(){window.history.forward();}
+  setTimeout("preventBack()", 0);
+  window.onunload=function(){null};
 
 
 // Ambil elemen-elemen yang diperlukan
@@ -49,6 +53,8 @@ registerToLogin.addEventListener('click', function (event) {
     registerModal.style.display = 'none';
     alert("Register Berhasil");
 });
+
+
 
 
 
